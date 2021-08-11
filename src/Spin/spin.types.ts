@@ -5,5 +5,4 @@ export type Option = {
 
 export type HandlerRef = {
   startSpin: () => void;
-  stopSpin: () => void;
 };

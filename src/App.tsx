@@ -1,33 +1,115 @@
-import React, { useMemo, useRef } from "react";
+import React, { useRef, useState } from "react";
 
-import Spin from "./Spin/spin.component";
+import Spin, { SpinItem } from "./Spin/spin.component";
 import { HandlerRef } from "./Spin/spin.types";
+import bg from "./roulette.png";
 function App() {
-  const spinHandler = useRef<HandlerRef>(null);
+  const [howMany, setHowMany] = useState(5);
+  const [done, setDone] = useState(false);
+
+  const spinHandlerRef = useRef<HandlerRef>(null);
 
   const handleStartSpin = () => {
-    spinHandler.current?.startSpin();
+    if (done) {
+      window.location.reload();
+      return;
+    }
+    spinHandlerRef.current?.startSpin();
   };
 
-  const handleStopSpin = () => {
-    spinHandler.current?.stopSpin();
+  const handleSpinComplete = (selectedIdx: number) => {
+    setDone(true);
   };
-
-  const exampleItems = useMemo(
-    () =>
-      Array(10)
-        .fill(0)
-        .map((_, i) => i),
-    []
-  );
 
   return (
-    <>
-      <Spin ref={spinHandler} size={300} items={exampleItems} speed={10} />
-      <button onClick={handleStartSpin}>Start</button>
-      <button onClick={handleStopSpin}>Stop</button>
-    </>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        position: "relative",
+        paddingTop: "45px",
+        width: "500px",
+        margin: "auto",
+        backgroundColor: "#eee",
+      }}
+    >
+      <div
+        style={{
+          width: "30px",
+          height: "30px",
+          clip: "rect(15px, 45px, 45px, -15px)",
+          position: "absolute",
+          top: 0,
+          left: "250px",
+          transform: "translateX(-50%)",
+        }}
+      >
+        <div
+          style={{
+            width: "30px",
+            height: "30px",
+            backgroundColor: "red",
+            transform: "rotate(45deg)",
+          }}
+        ></div>
+      </div>
+      <Spin
+        ref={spinHandlerRef}
+        size={500}
+        // selected={5}
+        time={2000}
+        items={exampleItems(howMany)}
+        onFinish={handleSpinComplete}
+        background={{
+          backgroundImage: `url('${bg}')`,
+          backgroundPosition: "center center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      <div
+        style={{
+          padding: "2rem",
+        }}
+      >
+        <input
+          type="range"
+          id="slider"
+          min="0"
+          max="100"
+          step="1"
+          value={howMany}
+          onChange={(e) => {
+            setHowMany(Number(e.target.value));
+          }}
+        />
+        <button onClick={handleStartSpin}>
+          ( {howMany} ){done ? "again" : "Pick"}
+        </button>
+      </div>
+    </div>
   );
 }
+
+const exampleItems = (count: number) =>
+  Array(count)
+    .fill(0)
+    .map((_, i) => (
+      <SpinItem>
+        <div
+          style={{
+            height: "30px",
+            width: "30px",
+            backgroundColor: "red",
+            color: "white",
+            borderRadius: "50%",
+            lineHeight: "30px",
+          }}
+        >
+          {i + 1}
+        </div>
+      </SpinItem>
+    ));
 
 export default App;
