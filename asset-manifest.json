@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/my-fun-spin/static/css/main.f1b5c6cd.chunk.css",
+    "main.js": "/my-fun-spin/static/js/main.d6468dc9.chunk.js",
+    "main.js.map": "/my-fun-spin/static/js/main.d6468dc9.chunk.js.map",
+    "runtime-main.js": "/my-fun-spin/static/js/runtime-main.768a462b.js",
+    "runtime-main.js.map": "/my-fun-spin/static/js/runtime-main.768a462b.js.map",
+    "static/js/2.dad63399.chunk.js": "/my-fun-spin/static/js/2.dad63399.chunk.js",
+    "static/js/2.dad63399.chunk.js.map": "/my-fun-spin/static/js/2.dad63399.chunk.js.map",
+    "static/js/3.0d4af18b.chunk.js": "/my-fun-spin/static/js/3.0d4af18b.chunk.js",
+    "static/js/3.0d4af18b.chunk.js.map": "/my-fun-spin/static/js/3.0d4af18b.chunk.js.map",
+    "index.html": "/my-fun-spin/index.html",
+    "static/css/main.f1b5c6cd.chunk.css.map": "/my-fun-spin/static/css/main.f1b5c6cd.chunk.css.map",
+    "static/js/2.dad63399.chunk.js.LICENSE.txt": "/my-fun-spin/static/js/2.dad63399.chunk.js.LICENSE.txt",
+    "static/media/roulette.dbfaf713.png": "/my-fun-spin/static/media/roulette.dbfaf713.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.768a462b.js",
+    "static/js/2.dad63399.chunk.js",
+    "static/css/main.f1b5c6cd.chunk.css",
+    "static/js/main.d6468dc9.chunk.js"
+  ]
+}
