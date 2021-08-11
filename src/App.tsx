@@ -96,7 +96,7 @@ const exampleItems = (count: number) =>
   Array(count)
     .fill(0)
     .map((_, i) => (
-      <SpinItem>
+      <SpinItem key={i}>
         <div
           style={{
             height: "30px",

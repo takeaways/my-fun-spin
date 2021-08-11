@@ -16,7 +16,7 @@ type Props<Item> = {
   time?: number;
   selected?: number;
   options?: Option;
-  background?: object;
+  background?: any;
   onFinish?: (selectedIdx: number) => void;
 };
 
@@ -111,7 +111,7 @@ function Spin<Item>(
   );
 }
 
-export const SpinItem: React.FC = ({ children }) => {
+export const SpinItem = ({ children }: { children: React.ReactElement }) => {
   return (
     <div
       style={{
