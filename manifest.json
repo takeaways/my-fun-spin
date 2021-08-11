@@ -1,25 +1,21 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "dir": "ltr",
+  "lang": "ko",
+  "name": "Geonil Jang",
+  "short_name": "Geonil Jang",
+  "scope": "/d-portfolio/",
+  "display": "standalone",
+  "start_url": "https://takeaways.github.io/d-portfolio/",
+  "background_color": "transparent",
+  "theme_color": "transparent",
+  "description": "참 개발자",
+  "orientation": "any",
+  "prefer_related_applications": false,
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
+      "src": "images/460x460.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "460x460"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }
