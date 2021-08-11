@@ -1,4 +1,4 @@
-# Just Form Fun Spin
+# Just For Fun Spin
 
 [Enjoy!](https://takeaways.github.io/my-fun-spin/)
 
