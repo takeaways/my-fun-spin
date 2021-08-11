@@ -58,7 +58,7 @@ function App() {
         ref={spinHandlerRef}
         size={500}
         // selected={5}
-        time={2000}
+        time={10000}
         items={exampleItems(howMany)}
         onFinish={handleSpinComplete}
         background={{
