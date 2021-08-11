@@ -29,6 +29,13 @@
       content="https://user-images.githubusercontent.com/52693107/129012997-6cbb7255-9de4-4447-9833-d461b0b70977.png"
     />
 
+    <link rel="manifest" href="manifest.json" />
+    <script type="module">
+      import "https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate";
+      const el = document.createElement("pwa-update");
+      document.body.appendChild(el);
+    </script>
+
     <title>Just For Fun Spin</title>
   </head>
   <body>
