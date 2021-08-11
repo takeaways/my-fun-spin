@@ -4,7 +4,7 @@ import Spin, { SpinItem } from "./Spin/spin.component";
 import { HandlerRef } from "./Spin/spin.types";
 import bg from "./roulette.png";
 function App() {
-  const [howMany, setHowMany] = useState(5);
+  const [howMany, setHowMany] = useState(45);
   const [done, setDone] = useState(false);
 
   const spinHandlerRef = useRef<HandlerRef>(null);
